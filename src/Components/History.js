@@ -8,6 +8,7 @@ import Spinner from './Spinner';
 import VideoCard from './VideoCard';
 
 let vidArray = [];
+let vidArrayReverse = [];
 export default function Bookmark() {
   const is_loggedin = useContext(LoggedInStatusContext);
   const userData = useContext(UserDataContext);
@@ -57,6 +58,7 @@ export default function Bookmark() {
             vidArray[i].video_uploader_img = `${userData.backendApi}` + data.response[i].video_uploader_img;
             vidArray[i].sno = data.response[i].sno;
           }
+          vidArrayReverse = vidArray.reverse();
         }
       }
       else {
@@ -79,7 +81,7 @@ export default function Bookmark() {
 
           {
             !loading &&
-            vidArray.map((val) => {
+            vidArrayReverse.map((val) => {
               return (
                 <>
                   <VideoCard key={val.sno + 4} sno={val.sno} videoTitle={val.title} videoChannelPhoto={val.video_uploader_img} videoThumbnail={`${userData.backendApi}${val.thumbnail}`} channelName={val.channelName} views={val.video_views} videoUploadingTime={(val.timestamp).split("T")[0]} />

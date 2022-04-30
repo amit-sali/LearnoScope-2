@@ -93,13 +93,13 @@ export default function Navbar() {
             document.getElementById("Nav_SearchBar").className = "my-auto mx-auto d-flex";
         }
         else {
-                if(document.getElementById("SearchBar").value.length !== 0){
-                    userData.setSearchQuery(document.getElementById("SearchBar").value);
-                    document.getElementById("redirectToSearchResult").click();
-                }
-                else{
-                    alert("Search Query cannot be empty");
-                }
+            if (document.getElementById("SearchBar").value.length !== 0) {
+                userData.setSearchQuery(document.getElementById("SearchBar").value);
+                document.getElementById("redirectToSearchResult").click();
+            }
+            else {
+                alert("Search Query cannot be empty");
+            }
         }
     }
     const GoBack = () => {
