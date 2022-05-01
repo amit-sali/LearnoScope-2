@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileCard from "./ProfileCard";
 // import VideoCard from "./VideoCard";
-import VideoFeed from "./VideoFeed";
+
 
 export default function UserProfile() {
   return (
@@ -26,29 +26,21 @@ export default function UserProfile() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/">History</a>
+              <a className="nav-link" href="/">
+                History
+              </a>
             </li>
 
             <li className="nav-item">
               {/* search bar here */}
               <div className="input-group">
-                <div className="form-outline">
-                  <input type="search" id="form1" className="form-control" />
-                 
-                </div>
-                <button type="button" className="btn btn-primary">
-                <i className="bi bi-search"></i>
-                {/* logo in button isnt visisble  */}
-                </button>
+                <div className="form-outline"></div>
               </div>
             </li>
           </ul>
         </div>
 
-
-        <div id="UserContentData">
-          <VideoFeed />
-        </div>
+        <div id="UserContentData">{/* <VideoFeed /> */}</div>
       </div>
     </>
   );
