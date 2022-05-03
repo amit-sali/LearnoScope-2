@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import '../Styles/VideoWatchSection.css';
 import { useContext } from 'react';
 import LoggedInStatusContext from '../Context/LoggedInStatus/LoggedInStatusContext';
@@ -12,9 +12,7 @@ export default function VideoWatchSection() {
     const is_loggedin = useContext(LoggedInStatusContext);
     const applicationMode = useContext(ApplicationModeContext);
     const userData = useContext(UserDataContext);
-
-
-
+    const [currTimeSec,setCurrTime]=useState(0);
     useEffect(() => {
         if (applicationMode.mode === "light") {
             document.getElementById("Video_metadata").style.color = "black";
@@ -78,6 +76,9 @@ export default function VideoWatchSection() {
     }
     const HideReportText = () => {
         document.getElementById("reportBtnText").style.display = "none";
+    }
+    const setTimeHere=()=>{
+        setCurrTime(document.getElementById('ActualVideo').currentTime)
     }
     return (
         <div id="RightSideSection" className="VideoWatchSection">
@@ -149,8 +150,11 @@ export default function VideoWatchSection() {
 
                 </div>
 
-                <div className="my-2 QuizSection" >
-                    <Vedionote />
+                <div className="my-2 QuizSection">
+                    <h3 style={{padding:"8px"}} >Add Your Notes Here : </h3>
+                    <div style={{display:"flex",justifyContent:"center"}}>
+                    <Vedionote cuTime={currTimeSec} setTime={setTimeHere}/>
+                    </div>
                 </div>
             </div>
         </div>
