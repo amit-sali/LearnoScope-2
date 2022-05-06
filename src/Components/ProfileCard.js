@@ -2,19 +2,8 @@ import React from 'react';
 import '../Styles/ProfileCard.scss';
 
 export default function ProfileCard() {
-  const editHandler = () => {
-    document.getElementById("bio").style.display = "block";
-    document.getElementById("Save_Btn").style.display = "block";
-    // document.getElementById('bio').style.transition = "all 1s ease-out";
-    // document.getElementById('Save_Btn').style.transition = "all 1s ease-out";
-
-  }
-  const saveHandler = () => {
-    document.getElementById("bio").style.display = "none";
-    document.getElementById("Save_Btn").style.display = "none";
-    // document.getElementById('bio').style.transition = "all 1s ease-out";
-    // document.getElementById('Save_Btn').style.transition = "all 1s ease-out";
-  }
+ 
+  
   return (
     <>
 
@@ -44,17 +33,17 @@ export default function ProfileCard() {
       <div className="profile-card-inf">
         <div className="profile-card-inf__item">
           <div className="profile-card-inf__title">1598   </div>
-          <div className="profile-card-inf__txt">Subscribers</div>
+          <div className="profile-card-inf__txt">Uploads</div>
         </div>
 
         <div className="profile-card-inf__item">
           <div className="profile-card-inf__title">65</div>
-          <div className="profile-card-inf__txt">uploads</div>
+          <div className="profile-card-inf__txt">Bookmarks</div>
         </div>
 
         <div className="profile-card-inf__item">
           <div className="profile-card-inf__title">123</div>
-          <div className="profile-card-inf__txt">missing entity</div>
+          <div className="profile-card-inf__txt">Videos Seen</div>
         </div>
 
         {/* <div className="profile-card-inf__item">
@@ -64,31 +53,31 @@ export default function ProfileCard() {
       </div>
 
       <div className="profile-card-social">
-        <a href="https://www.facebook.com" className="profile-card-social__item facebook" target="_blank">
+        <a href="https://www.facebook.com" className="profile-card-social__item facebook" target="blank">
           <span className="icon-font">
               <svg className="icon"> <svg class="icon"><use xlinkHref="#icon-facebook"></use></svg></svg>
           </span>
         </a>
 
-        <a href="https://twitter.com" className="profile-card-social__item twitter" target="_blank">
+        <a href="https://twitter.com" className="profile-card-social__item twitter" target="blank">
           <span className="icon-font">
               <svg className="icon"> <use xlinkHref="#icon-twitter"></use> </svg>
           </span>
         </a>
 
-        <a href="https://www.instagram.com/" className="profile-card-social__item instagram" target="_blank">
+        <a href="https://www.instagram.com/" className="profile-card-social__item instagram" target="blank">
           <span className="icon-font">
               <svg class="icon"><use xlinkHref="#icon-instagram"></use>  </svg>
           </span>
         </a>
 
-        <a href="https://www.behance.net/" className="profile-card-social__item behance" target="_blank">
+        <a href="https://www.behance.net/" className="profile-card-social__item behance" target="blank">
           <span className="icon-font">
                <svg class="icon"><use xlinkHref="#icon-behance"></use></svg>
           </span>
         </a>
 
-        <a href="https://github.com/" className="profile-card-social__item github" target="_blank">
+        <a href="https://github.com/" className="profile-card-social__item github" target="blank">
           <span className="icon-font">
           <svg class="icon"><use xlinkHref="#icon-github"></use></svg>
           </span>
@@ -96,7 +85,7 @@ export default function ProfileCard() {
 
       
 
-        <a href="http://github.com/amit-sali" className="profile-card-social__item link" target="_blank">
+        <a href="http://github.com/amit-sali" className="profile-card-social__item link" target="blank">
           <span className="icon-font">
           <svg class="icon"><use xlinkHref="#icon-link"></use></svg>
           </span>

@@ -171,12 +171,12 @@ export default function Navbar() {
                                 </button>
 
 
-                                <input id='SearchBar' className="Search_Bar form-control-customize me-2" type="search" placeholder="Search" aria-label="Search" />
+                                {/* <input id='SearchBar' className="Search_Bar form-control-customize me-2" type="search" placeholder="Search" aria-label="Search" />
                                 <button id="SearchIcon" className={applicationMode.mode === "light" ? "btn btn-outline-dark p-2" : "btn btn-outline-light p-2"} type="button" onClick={SearchHandle}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
                                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                     </svg>
-                                </button>
+                                </button> */}
                             </form>
                         </div>
                         <div className="d-flex justify-content-between my-auto">
