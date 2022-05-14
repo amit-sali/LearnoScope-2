@@ -85,7 +85,7 @@ export default function VideoWatchSection() {
             <div className='VideoPlaySection my-4'>
                 <div className="VideoPlayer">
                     <div className="Video">
-                        <video id="ActualVideo" src={userData.currentVideoLink} className="VideoTag" type="video/mp4" controls>
+                        <video id="ActualVideo" controlsList="nodownload" src={userData.currentVideoLink} className="VideoTag" type="video/mp4" controls>
                         </video>
                     </div>
 

@@ -22,7 +22,7 @@ export default function LandingInterface() {
               </div>
             </div>
             <div className="col-lg-4 order-1 order-lg-2 hero-img" data-aos-delay="300">
-              <img src="assets/img/hero-img.png" className="img-fluid animated" alt="" />
+              <img src="Images/learnoLaptop.png" className="img-fluid animated" alt=""/>
             </div>
           </div>
         </div>
