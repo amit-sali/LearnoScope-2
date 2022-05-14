@@ -269,7 +269,7 @@ export default function Navbar() {
                                     <div id="profileDropdownBox" className="card-body">
                                         <Link to="/userProfile" style={{ textDecoration: "none", color: "black" }}>
                                             <p className="userProfileOptions">
-                                                Your Profile
+                                                My Profile
                                             </p>
                                         </Link>
                                         <p onClick={handleUserLogout} id="userProfileOption-Logout" className="userProfileOptions">
