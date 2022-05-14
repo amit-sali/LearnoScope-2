@@ -18,6 +18,7 @@ const UserDataState = (props) => {
 
     let [searchQuery, setSearchQuery] = useState("");
 
+    let [notificationMsg, setNotificationMsg] = useState("logged in successfull :)");
 
     const backendApi = "http://127.0.0.1:8000";
 
@@ -60,7 +61,11 @@ const UserDataState = (props) => {
 
         //search Query
         "searchQuery": searchQuery,
-        "setSearchQuery": setSearchQuery
+        "setSearchQuery": setSearchQuery,
+
+        //notification message
+        "notificationMsg": notificationMsg,
+        "setNotificationMsg": setNotificationMsg
     }
 
 
