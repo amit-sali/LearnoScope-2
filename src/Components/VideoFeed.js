@@ -66,7 +66,6 @@ export default function VideoFeed() {
         }
         if (is_loggedin.loggedin === true) {
             getVideoFeed();
-            document.getElementById("GreetingAlert").style.display = "block";
         }
         if (localStorage.getItem("userEmail") !== null) {
             is_loggedin.setLoggedin(true);
@@ -111,6 +110,5 @@ export default function VideoFeed() {
 
 
     )
-
 
 }

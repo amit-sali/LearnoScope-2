@@ -10,32 +10,32 @@ export default function ReminderCard() {
         if (document.getElementById('5m').checked) {
             console.log("5m");
             remindAsync(userData.currentSno, "5m");
+            alert("You'll be reminded on whatsapp after 5 minutes to watch the video named : \"" + userData.currentVideoTitle + "\"");
             document.getElementById("Application-logo").click();
-            userData.setNotificationMsg("You'll be reminded on whatsapp after 5 minutes to watch the video named : \""+userData.currentVideoTitle+"\"");
         }
         else if (document.getElementById('10m').checked) {
             console.log("10m");
             remindAsync(userData.currentSno, "10m");
+            alert("You'll be reminded on whatsapp after 5 minutes");
             document.getElementById("Application-logo").click();
-            userData.setNotificationMsg("You'll be reminded on whatsapp after 5 minutes");
         }
         else if (document.getElementById('15m').checked) {
             console.log("15m");
             document.getElementById("Application-logo").click();
+            alert("You'll be reminded on whatsapp after 5 minutes");
             remindAsync(userData.currentSno, "15m");
-            userData.setNotificationMsg("You'll be reminded on whatsapp after 5 minutes");
         }
         else if (document.getElementById('1h').checked) {
             console.log("1h");
             document.getElementById("Application-logo").click();
+            alert("You'll be reminded on whatsapp after 5 minutes");
             remindAsync(userData.currentSno, "1h");
-            userData.setNotificationMsg("You'll be reminded on whatsapp after 5 minutes");
         }
         else if (document.getElementById('2h').checked) {
             console.log("2h");
             document.getElementById("Application-logo").click();
+            alert("You'll be reminded on whatsapp after 5 minutes");
             remindAsync(userData.currentSno, "2h");
-            userData.setNotificationMsg("You'll be reminded on whatsapp after 5 minutes");
         }
 
     }

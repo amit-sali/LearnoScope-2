@@ -30,7 +30,6 @@ const UserDataState = (props) => {
     let [bookmarkCount, setBookmarkCount] = useState("");
     let [dateJoined, setDateJoined] = useState("");
     
-
     const backendApi = "http://127.0.0.1:8000";
 
     const state = {
