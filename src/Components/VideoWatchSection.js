@@ -24,6 +24,17 @@ export default function VideoWatchSection() {
         if (localStorage.getItem("userEmail") !== null) {
             is_loggedin.setLoggedin(true);
         }
+
+        if (userData.currentVideoChannelName === "") {
+            userData.setCurrentVideoLink(localStorage.getItem("CurrentVideoLink"));
+            userData.setCurrentVideoTitle(localStorage.getItem("CurrentVideoTitle"));
+            userData.setCurrentVideoChannelName(localStorage.getItem("CurrentVideoChannelName"));
+            userData.setCurrentVideoLikes(localStorage.getItem("CurrentVideoLikes"));
+            userData.setCurrentSno(localStorage.getItem("CurrentSno"));
+            userData.setCurrentVideoDesc(localStorage.getItem("CurrentVideoDesc"));
+            userData.setCurrentVideoNotes(localStorage.getItem("CurrentVideoNotes"));
+            userData.setCurrentVideoChannelPhoto(localStorage.getItem("CurrentVideoChannelPhoto"));
+        }
     })
 
     const increaseLikeCount = () => {
@@ -53,8 +64,8 @@ export default function VideoWatchSection() {
 
     let setReminder = () => {
         console.log("clicked reminder btn");
-        document.getElementById("VideoWatchSection").style.display="none";
-        document.getElementById("ReminderCard").style.display="block";
+        document.getElementById("VideoWatchSection").style.display = "none";
+        document.getElementById("ReminderCard").style.display = "block";
     }
 
 
@@ -66,12 +77,12 @@ export default function VideoWatchSection() {
         document.getElementById("likeBtnText").style.display = "none";
     }
 
-    const DisplayShareText = () => {
-        document.getElementById("shareBtnText").style.display = "block";
-    }
-    const HideShareText = () => {
-        document.getElementById("shareBtnText").style.display = "none";
-    }
+    // const DisplayShareText = () => {
+    //     document.getElementById("shareBtnText").style.display = "block";
+    // }
+    // const HideShareText = () => {
+    //     document.getElementById("shareBtnText").style.display = "none";
+    // }
 
     const DisplayWatchLaterText = () => {
         document.getElementById("wlBtnText").style.display = "block";
@@ -116,12 +127,14 @@ export default function VideoWatchSection() {
                                     <p className="likeCountText" id="likeBtnText">{userData.currentVideoLikes} Likes</p>
                                 </span>
 
-                                <span style={{ display: "flex", flexDirection: "column" }}>
-                                    {/* sharebutton  */}
+                                {/* <span style={{ display: "flex", flexDirection: "column" }}>
+                                    sharebutton 
                                     <svg xmlns="http://www.w3.org/2000/svg" onMouseEnter={DisplayShareText} onMouseLeave={HideShareText} style={{ height: "35px", width: "35px", margin: "5px 10px" }} fill="currentColor" className="VideoMetaBtn bi bi-send-fill" viewBox="0 0 16 16">
                                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
                                     </svg>
-                                    <p id="shareBtnText">Share</p></span>
+                                    <p id="shareBtnText">Share</p>
+                                    </span> */}
+
                                 <span onClick={setReminder} style={{ display: "flex", flexDirection: "column" }}>
                                     <svg xmlns="http://www.w3.org/2000/svg" onMouseEnter={DisplayWatchLaterText} onMouseLeave={HideWatchLaterText} style={{ height: "35px", width: "35px", margin: "5px 10px" }} fill="currentColor" className="VideoMetaBtn bi bi-watch" viewBox="0 0 16 16">
                                         <path d="M8.5 5a.5.5 0 0 0-1 0v2.5H6a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V5z" />
@@ -169,9 +182,9 @@ export default function VideoWatchSection() {
 
                 </div>
             </div>
-            
+
             <div className='d-flex justify-content-center my-4'>
-            <ReminderCard/>
+                <ReminderCard />
             </div>
 
         </>

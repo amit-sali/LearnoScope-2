@@ -19,10 +19,11 @@ export default function SearchResult() {
     () => {
       if (localStorage.getItem("userEmail") !== null) {
         is_loggedin.setLoggedin(true);
+        userData.setSearchQuery( localStorage.getItem("searchQuery"))
       }
       function searchVideoData() {
         let userObject = {
-          "search_string": userData.searchQuery,
+          "search_string":  localStorage.getItem("searchQuery"),
           "email": localStorage.getItem("userEmail")
         }
 
