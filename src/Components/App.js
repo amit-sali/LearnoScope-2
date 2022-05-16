@@ -20,7 +20,7 @@ import Bookmark from './Bookmark';
 import YourVideoSection from './YourVideoSection';
 import History from './History';
 import SearchResult from './SearchResult';
-
+import Error404 from './Error404';
 
 
 import {
@@ -93,6 +93,9 @@ function App() {
                   </Route>
                   <Route exact path="/searchResult">
                     <SearchResult />
+                  </Route>
+                  <Route>
+                    <Error404 />
                   </Route>
                 </Switch>
               </div>
