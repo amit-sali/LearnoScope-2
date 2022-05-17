@@ -10,16 +10,26 @@ import ReminderCard from '../Components/ReminderCard'
 
 
 export default function VideoWatchSection() {
+  const applicationMode = useContext(ApplicationModeContext);
     const is_loggedin = useContext(LoggedInStatusContext);
-    const applicationMode = useContext(ApplicationModeContext);
     const userData = useContext(UserDataContext);
     const [currTimeSec, setCurrTime] = useState(0);
     useEffect(() => {
         if (applicationMode.mode === "light") {
-            document.getElementById("Video_metadata").style.color = "black";
+            document.getElementById("Video_metadata").style.color = "#282828";
+            document.getElementById("accordion_item").style.backgroundColor = "white";
+            document.getElementById("accordion_item").style.borderColor = "#282828";
+            document.getElementById("accordian_body").style.color = "#282828";
+            document.getElementById("notes").style.color = "#282828";
+            document.getElementById("notes").style.borderColor = "#282828";
         }
         else {
             document.getElementById("Video_metadata").style.color = "white";
+            document.getElementById("accordion_item").style.backgroundColor = "#282828";
+            document.getElementById("accordion_item").style.borderColor = "white";
+            document.getElementById("accordian_body").style.color = "white";  
+            document.getElementById("notes").style.color = "gray";
+            document.getElementById("notes").style.borderColor = "white";
         }
         if (localStorage.getItem("userEmail") !== null) {
             is_loggedin.setLoggedin(true);
@@ -151,7 +161,7 @@ export default function VideoWatchSection() {
                         </div>
 
                         <div className="accordion" id="accordionExample" >
-                            <div className="accordion-item">
+                            <div id="accordion_item" className="accordion-item">
                                 <h2 className="accordion-header">
                                     <button className="accordion-button ChannelInfo" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <div className="ChannelPic"><img src={userData.currentVideoChannelPhoto} style={{ borderRadius: "50%" }} height="50px" width="50px" alt=".." /></div>
@@ -159,7 +169,7 @@ export default function VideoWatchSection() {
                                     </button>
                                 </h2>
                                 <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div className="accordion-body">
+                                    <div id="accordian_body" className="accordion-body">
                                         <strong>Description : </strong>
                                         <br />
                                         {userData.currentVideoDesc}
@@ -173,7 +183,7 @@ export default function VideoWatchSection() {
 
                     </div>
 
-                    <div className="my-2 QuizSection">
+                    <div id="notes" className="my-2 QuizSection">
                         <h3 style={{ padding: "8px" }} >Add Your Notes Here : </h3>
                         <div style={{ display: "flex", justifyContent: "center" }}>
                             <Vedionote cuTime={currTimeSec} setTime={setTimeHere} />

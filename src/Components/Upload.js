@@ -18,12 +18,12 @@ export default function Upload() {
 
         if (applicationMode.mode === "light")
         {
-            document.getElementById("in1").style.color = "black";
-            document.getElementById("in2").style.color = "black";
+            document.getElementById("in1").style.color = "#282828";
+            document.getElementById("in2").style.color = "#282828";
             document.getElementById("Ved_1").style.border = "none";
             document.getElementById("card").style.backgroundColor = "white";
             document.getElementById("card").style.transition = "all 1s ease-out";
-            document.getElementById("in3").style.color = "black";
+            document.getElementById("in3").style.color = "#282828";
             document.getElementById("card_2").style.backgroundColor = "white";
             document.getElementById("card_2").style.transition = "all 1s ease-out";
 
@@ -33,10 +33,10 @@ export default function Upload() {
             document.getElementById("in1").style.color = "white";
             document.getElementById("in2").style.color = "white";
             document.getElementById("Ved_1").style.border = "solid 2px";
-            document.getElementById("card").style.backgroundColor = "black";
+            document.getElementById("card").style.backgroundColor = "#282828";
             document.getElementById("card").style.transition = "all 1s ease-out";
             document.getElementById("in3").style.color = "white";
-            document.getElementById("card_2").style.backgroundColor = "black";
+            document.getElementById("card_2").style.backgroundColor = "#282828";
             document.getElementById("card_2").style.transition = "all 1s ease-out";
         }
     })
