@@ -10,7 +10,7 @@ import VideoCard from './VideoCard';
 
 let vidArray = [];
 export default function SearchResult() {
-  const applicationMode = useContext(ApplicationModeContext);
+  // const applicationMode = useContext(ApplicationModeContext);
   const userData = useContext(UserDataContext);
   const [loading, setLoading] = useState(true);
   const is_loggedin = useContext(LoggedInStatusContext);
@@ -23,14 +23,14 @@ export default function SearchResult() {
         is_loggedin.setLoggedin(true);
         userData.setSearchQuery( localStorage.getItem("searchQuery"))
       }
-      if (applicationMode.mode === "light")
-      {
-        document.getElementById("heading").style.color = "#282828";
-      }
-      else
-      {
-        document.getElementById("heading").style.color = "white";
-      }
+      // if (applicationMode.mode === "light")
+      // {
+      //   document.getElementById("heading").style.color = "#282828";
+      // }
+      // else
+      // {
+      //   document.getElementById("heading").style.color = "white";
+      // }
       function searchVideoData() {
         let userObject = {
           "search_string":  localStorage.getItem("searchQuery"),

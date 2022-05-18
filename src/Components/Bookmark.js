@@ -28,7 +28,7 @@ export default function Bookmark() {
       document.getElementById("heading").style.color = "#282828";
     }
     else
-    {
+        {
       document.getElementById("heading").style.color = "white";
     }
   })
