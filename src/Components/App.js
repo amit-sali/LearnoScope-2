@@ -31,9 +31,9 @@ import {
 
 
 function App() {
-
+ 
   return (
-    <>
+    <div style={{"cursor":"url('cursor/cursor.png'),auto"}}>
       {/* <Vedionote/> */}
       <Router>
         <LoggedInStatusState>
@@ -104,7 +104,7 @@ function App() {
         </LoggedInStatusState>
       </Router>
 
-    </>
+    </div>
   );
 }
 
