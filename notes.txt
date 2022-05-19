@@ -1,0 +1,63 @@
+// note by amit
+// svg og messg icon
+
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79" height="88" viewBox="0 0 79 88">
+        <defs>
+          <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#42d4fe"/>
+            <stop offset="1" stop-color="#1d47ef"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#84c9fd"/>
+            <stop offset="1" stop-color="#0065c0"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="0.19" stop-color="#fefefe"/>
+            <stop offset="1" stop-color="#f7f7f7" stop-opacity="0.8"/>
+            <stop offset="1" stop-color="gray"/>
+          </linearGradient>
+          <filter id="Rectangle_2" x="1.5" y="24.5" width="59" height="15" filterUnits="userSpaceOnUse">
+            <feOffset dy="2" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feFlood flood-color="#5c91d6"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+          </filter>
+          <filter id="Rectangle_3" x="1.5" y="38.5" width="59" height="15" filterUnits="userSpaceOnUse">
+            <feOffset dy="2" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+            <feFlood flood-color="#5c91d6"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+          </filter>
+          <filter id="Rectangle_4" x="1.5" y="52.5" width="59" height="15" filterUnits="userSpaceOnUse">
+            <feOffset dy="2" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur-3"/>
+            <feFlood flood-color="#5c91d6"/>
+            <feComposite operator="in" in2="blur-3"/>
+            <feComposite in="SourceGraphic"/>
+          </filter>
+          <filter id="Rectangle_5" x="1.5" y="66.5" width="39" height="15" filterUnits="userSpaceOnUse">
+            <feOffset dy="2" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur-4"/>
+            <feFlood flood-color="#5c91d6"/>
+            <feComposite operator="in" in2="blur-4"/>
+            <feComposite in="SourceGraphic"/>
+          </filter>
+        </defs>
+        <path id="Path_1" data-name="Path 1" d="M11,0H51A11,11,0,0,1,62,11V56A11,11,0,0,1,51,67H11A11,11,0,0,1,0,56V11A11,11,0,0,1,11,0Z" transform="translate(17)" fill="url(#linear-gradient)"/>
+        <rect id="Rectangle_1" data-name="Rectangle 1" width="63" height="76" rx="11" transform="translate(0 12)" fill="url(#linear-gradient-2)"/>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_2)">
+          <rect id="Rectangle_2-2" data-name="Rectangle 2" width="50" height="6" rx="3" transform="translate(6 27)" fill="url(#linear-gradient-3)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_3)">
+          <rect id="Rectangle_3-2" data-name="Rectangle 3" width="50" height="6" rx="3" transform="translate(6 41)" fill="url(#linear-gradient-3)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_4)">
+          <rect id="Rectangle_4-2" data-name="Rectangle 4" width="50" height="6" rx="3" transform="translate(6 55)" fill="url(#linear-gradient-3)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_5)">
+          <rect id="Rectangle_5-2" data-name="Rectangle 5" width="30" height="6" rx="3" transform="translate(6 69)" fill="url(#linear-gradient-3)"/>
+        </g>
+      </svg>
